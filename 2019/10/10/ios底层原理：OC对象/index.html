@@ -87,8 +87,7 @@
 <meta name="description" content="一、OC对象的本质oc的对象占多大内存空间？
 答案是16个字节，为什么是16个，一个oc对象内部只存放了一个isa指针，而在64位系统中，一个指针占据的空间是8字节，但是为了字节对齐，最小的内存空间分配为16个字节。
 
-oc的对象，是由类创建的，类在oc里面是Class，那么Class的本质是什么？实际上class是由c的结构体构成的。参阅runtime中的objc.h文件可知,具体实现如下
-12">
+oc的对象，是由类创建的，类在oc里面是Class，那么Class的本质是什么？实际上class是由c的结构体构成的。参阅runtime中的objc.h文件可知,具体实现如下">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ios底层原理：OC对象">
 <meta property="og:url" content="http://yoursite.com/2019/10/10/ios底层原理：OC对象/index.html">
@@ -96,18 +95,16 @@ oc的对象，是由类创建的，类在oc里面是Class，那么Class的本质
 <meta property="og:description" content="一、OC对象的本质oc的对象占多大内存空间？
 答案是16个字节，为什么是16个，一个oc对象内部只存放了一个isa指针，而在64位系统中，一个指针占据的空间是8字节，但是为了字节对齐，最小的内存空间分配为16个字节。
 
-oc的对象，是由类创建的，类在oc里面是Class，那么Class的本质是什么？实际上class是由c的结构体构成的。参阅runtime中的objc.h文件可知,具体实现如下
-12">
+oc的对象，是由类创建的，类在oc里面是Class，那么Class的本质是什么？实际上class是由c的结构体构成的。参阅runtime中的objc.h文件可知,具体实现如下">
 <meta property="og:image" content="http://yoursite.com/2019/10/10/ios底层原理：OC对象/1.png">
 <meta property="og:image" content="http://yoursite.com/2019/10/10/ios底层原理：OC对象/2.png">
-<meta property="og:updated_time" content="2019-10-10T10:23:23.072Z">
+<meta property="og:updated_time" content="2019-10-10T10:26:32.362Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ios底层原理：OC对象">
 <meta name="twitter:description" content="一、OC对象的本质oc的对象占多大内存空间？
 答案是16个字节，为什么是16个，一个oc对象内部只存放了一个isa指针，而在64位系统中，一个指针占据的空间是8字节，但是为了字节对齐，最小的内存空间分配为16个字节。
 
-oc的对象，是由类创建的，类在oc里面是Class，那么Class的本质是什么？实际上class是由c的结构体构成的。参阅runtime中的objc.h文件可知,具体实现如下
-12">
+oc的对象，是由类创建的，类在oc里面是Class，那么Class的本质是什么？实际上class是由c的结构体构成的。参阅runtime中的objc.h文件可知,具体实现如下">
 <meta name="twitter:image" content="http://yoursite.com/2019/10/10/ios底层原理：OC对象/1.png">
 
 
@@ -354,6 +351,7 @@ oc的对象，是由类创建的，类在oc里面是Class，那么Class的本质
 <p>答案是16个字节，为什么是16个，一个oc对象内部只存放了一个isa指针，而在64位系统中，一个指针占据的空间是8字节，但是为了字节对齐，最小的内存空间分配为16个字节。</p>
 <p><img src="/2019/10/10/ios底层原理：OC对象/1.png" alt=""></p>
 <p>oc的对象，是由类创建的，类在oc里面是Class，那么Class的本质是什么？实际上class是由c的结构体构成的。<strong>参阅runtime中的objc.h文件可知,</strong>具体实现如下</p>
+<a id="more"></a>
 <figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">struct</span> objc_class &#123;</div><div class="line">    Class _Nonnull isa  OBJC_ISA_AVAILABILITY;</div><div class="line"></div><div class="line"><span class="meta">#if !__OBJC2__</span></div><div class="line">    Class _Nullable super_class                              OBJC2_UNAVAILABLE;</div><div class="line">    <span class="keyword">const</span> <span class="keyword">char</span> * _Nonnull name                               OBJC2_UNAVAILABLE;</div><div class="line">    <span class="keyword">long</span> version                                             OBJC2_UNAVAILABLE;</div><div class="line">    <span class="keyword">long</span> info                                                OBJC2_UNAVAILABLE;</div><div class="line">    <span class="keyword">long</span> instance_size                                       OBJC2_UNAVAILABLE;</div><div class="line">    <span class="keyword">struct</span> objc_ivar_list * _Nullable ivars                  OBJC2_UNAVAILABLE;</div><div class="line">    <span class="keyword">struct</span> objc_method_list * _Nullable * _Nullable methodLists                    OBJC2_UNAVAILABLE;</div><div class="line">    <span class="keyword">struct</span> objc_cache * _Nonnull cache                       OBJC2_UNAVAILABLE;</div><div class="line">    <span class="keyword">struct</span> objc_protocol_list * _Nullable protocols          OBJC2_UNAVAILABLE;</div><div class="line"><span class="meta">#endif</span></div><div class="line"></div><div class="line">&#125; OBJC2_UNAVAILABLE;</div></pre></td></tr></table></figure>
 <p>每一个oc对象里面都有一个isa指针。如下</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">	struct objc_object &#123;</div><div class="line">    Class _Nonnull isa  OBJC_ISA_AVAILABILITY;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>

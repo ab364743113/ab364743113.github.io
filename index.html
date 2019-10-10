@@ -340,30 +340,17 @@
 
       
         
-          
-            <h3 id="一、OC对象的本质"><a href="#一、OC对象的本质" class="headerlink" title="一、OC对象的本质"></a>一、OC对象的本质</h3><p><strong>oc的对象占多大内存空间？</strong></p>
+          <h3 id="一、OC对象的本质"><a href="#一、OC对象的本质" class="headerlink" title="一、OC对象的本质"></a>一、OC对象的本质</h3><p><strong>oc的对象占多大内存空间？</strong></p>
 <p>答案是16个字节，为什么是16个，一个oc对象内部只存放了一个isa指针，而在64位系统中，一个指针占据的空间是8字节，但是为了字节对齐，最小的内存空间分配为16个字节。</p>
 <p><img src="/2019/10/10/ios底层原理：OC对象/1.png" alt=""></p>
 <p>oc的对象，是由类创建的，类在oc里面是Class，那么Class的本质是什么？实际上class是由c的结构体构成的。<strong>参阅runtime中的objc.h文件可知,</strong>具体实现如下</p>
-<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">struct</span> objc_class &#123;</div><div class="line">    Class _Nonnull isa  OBJC_ISA_AVAILABILITY;</div><div class="line"></div><div class="line"><span class="meta">#if !__OBJC2__</span></div><div class="line">    Class _Nullable super_class                              OBJC2_UNAVAILABLE;</div><div class="line">    <span class="keyword">const</span> <span class="keyword">char</span> * _Nonnull name                               OBJC2_UNAVAILABLE;</div><div class="line">    <span class="keyword">long</span> version                                             OBJC2_UNAVAILABLE;</div><div class="line">    <span class="keyword">long</span> info                                                OBJC2_UNAVAILABLE;</div><div class="line">    <span class="keyword">long</span> instance_size                                       OBJC2_UNAVAILABLE;</div><div class="line">    <span class="keyword">struct</span> objc_ivar_list * _Nullable ivars                  OBJC2_UNAVAILABLE;</div><div class="line">    <span class="keyword">struct</span> objc_method_list * _Nullable * _Nullable methodLists                    OBJC2_UNAVAILABLE;</div><div class="line">    <span class="keyword">struct</span> objc_cache * _Nonnull cache                       OBJC2_UNAVAILABLE;</div><div class="line">    <span class="keyword">struct</span> objc_protocol_list * _Nullable protocols          OBJC2_UNAVAILABLE;</div><div class="line"><span class="meta">#endif</span></div><div class="line"></div><div class="line">&#125; OBJC2_UNAVAILABLE;</div></pre></td></tr></table></figure>
-<p>每一个oc对象里面都有一个isa指针。如下</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">	struct objc_object &#123;</div><div class="line">    Class _Nonnull isa  OBJC_ISA_AVAILABILITY;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
-<h3 id="二、对象的成员变量"><a href="#二、对象的成员变量" class="headerlink" title="二、对象的成员变量"></a>二、对象的成员变量</h3><p>oc对象的成员变量，方法，协议统统都是存放在class里面。在上面的objc_class结构体中，很明显可以看到这一点。</p>
-<h3 id="三、也来聊聊isa"><a href="#三、也来聊聊isa" class="headerlink" title="三、也来聊聊isa"></a>三、也来聊聊isa</h3><p>上一张大神图</p>
-<p><img src="/2019/10/10/ios底层原理：OC对象/2.png" alt=""></p>
-<p>记住一点：</p>
-<ol>
-<li><p><strong>对象的isa指向的是：由谁创建的当前对象</strong>。</p>
-</li>
-<li><p><strong>NSObject类的superclass 为nil</strong></p>
-</li>
-<li><p><strong>NSObject元类的isa指向的是它自己</strong></p>
-</li>
-</ol>
-<hr>
-<h4 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h4><p><a href="https://www.jianshu.com/p/ffd742041946" target="_blank" rel="external">ios底层原理探究</a></p>
-
-          
+          <!--noindex-->
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2019/10/10/ios底层原理：OC对象/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
