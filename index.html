@@ -1,869 +1,1501 @@
 <!DOCTYPE html>
-<html>
+
+
+
+
+
+<html lang="zh-CN">
 <head>
-  <meta charset="utf-8">
-  
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>火三</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 3.9.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.4.1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.4.1">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.4.1">
+  <link rel="mask-icon" href="/images/logo.svg?v=7.4.1" color="#222">
+
+<link rel="stylesheet" href="/css/main.css?v=7.4.1">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '7.4.1',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
+    copycode: {"enable":true,"show_result":true,"style":"default"},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: '',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"bounceLeftIn"}},
+    translation: {
+      copy_button: '复制',
+      copy_success: '复制成功',
+      copy_failure: '复制失败'
+    },
+    sidebarPadding: 40
+  };
+</script>
+
   <meta name="description" content="学如逆水行舟，不进则退，何况逝者如斯夫，不舍昼夜兮">
 <meta property="og:type" content="website">
 <meta property="og:title" content="火三">
 <meta property="og:url" content="http://yoursite.com/index.html">
 <meta property="og:site_name" content="火三">
 <meta property="og:description" content="学如逆水行舟，不进则退，何况逝者如斯夫，不舍昼夜兮">
+<meta property="og:locale" content="zh-CN">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="火三">
 <meta name="twitter:description" content="学如逆水行舟，不进则退，何况逝者如斯夫，不舍昼夜兮">
+  <link rel="canonical" href="http://yoursite.com/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: true,
+    isPost: false,
+    isPage: false,
+    isArchive: false
+  };
+</script>
+
+  <title>火三</title>
   
-    <link rel="alternative" href="/atom.xml" title="火三" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="//favicon.png">
-  
-  <link rel="stylesheet" href="/css/style.css">
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
 </head>
 
-<body>
-  <div id="container">
-    <div class="left-col">
-    <div class="overlay"></div>
-<div class="intrude-less">
-	<header id="header" class="inner">
-		<a href="/" class="profilepic">
-			
-			<img lazy-src="nullhttp://ock9zbzms.bkt.clouddn.com/IMG_1238.JPG" class="js-avatar">
-			
-		</a>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
 
-		<hgroup>
-		  <h1 class="header-author"><a href="/">火三</a></h1>
-		</hgroup>
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
 
-		
-		<p class="header-subtitle">学如逆水行舟，不进则退，何况逝者如斯夫，不舍昼夜</p>
-		
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">火三</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+        <p class="site-subtitle">学如逆水行舟，不进则退，何况逝者如斯夫，不舍昼夜</p>
+      
+  </div>
 
-		
-			<div class="switch-btn">
-				<div class="icon">
-					<div class="icon-ctn">
-						<div class="icon-wrap icon-house" data-idx="0">
-							<div class="birdhouse"></div>
-							<div class="birdhouse_holes"></div>
-						</div>
-						<div class="icon-wrap icon-ribbon hide" data-idx="1">
-							<div class="ribbon"></div>
-						</div>
-						
-						<div class="icon-wrap icon-link hide" data-idx="2">
-							<div class="loopback_l"></div>
-							<div class="loopback_r"></div>
-						</div>
-						
-						
-						<div class="icon-wrap icon-me hide" data-idx="3">
-							<div class="user"></div>
-							<div class="shoulder"></div>
-						</div>
-						
-					</div>
-					
-				</div>
-				<div class="tips-box hide">
-					<div class="tips-arrow"></div>
-					<ul class="tips-inner">
-						<li>菜单</li>
-						<li>标签</li>
-						
-						<li>友情链接</li>
-						
-						
-						<li>关于我</li>
-						
-					</ul>
-				</div>
-			</div>
-		
-
-		<div class="switch-area">
-			<div class="switch-wrap">
-				<section class="switch-part switch-part1">
-					<nav class="header-menu">
-						<ul>
-						
-							<li><a href="/">主页</a></li>
-				        
-							<li><a href="/archives">所有文章</a></li>
-				        
-							<li><a href="/categories">分类</a></li>
-				        
-							<li><a href="/tags">标签</a></li>
-				        
-						</ul>
-					</nav>
-					<nav class="header-nav">
-						<div class="social">
-							
-								<a class="github" target="_blank" href="#" title="github">github</a>
-					        
-								<a class="weibo" target="_blank" href="#" title="weibo">weibo</a>
-					        
-								<a class="rss" target="_blank" href="#" title="rss">rss</a>
-					        
-								<a class="zhihu" target="_blank" href="#" title="zhihu">zhihu</a>
-					        
-						</div>
-					</nav>
-				</section>
-				
-				
-				<section class="switch-part switch-part2">
-					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/coredata学习/" style="font-size: 13.33px;">coredata学习</a> <a href="/tags/python/" style="font-size: 10px;">python</a> <a href="/tags/三方库研究/" style="font-size: 16.67px;">三方库研究</a> <a href="/tags/工具/" style="font-size: 10px;">工具</a> <a href="/tags/点点滴滴/" style="font-size: 20px;">点点滴滴</a> <a href="/tags/翻译/" style="font-size: 10px;">翻译</a>
-					</div>
-				</section>
-				
-				
-				
-				<section class="switch-part switch-part3">
-					<div id="js-friends">
-					
-			          <a target="_blank" class="main-nav-link switch-friends-link" href="https://kaisayoung.github.io/">二代的博客</a>
-			        
-			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">七牛云</a>
-			        
-			        </div>
-				</section>
-				
-
-				
-				
-				<section class="switch-part switch-part4">
-				
-					<div id="js-aboutme">我是谁，我从哪里来，我到哪里去？我就是我，是颜色不一样的吃货…</div>
-				</section>
-				
-			</div>
-		</div>
-	</header>				
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
 </div>
 
-    </div>
-    <div class="mid-col">
-      <nav id="mobile-nav">
-  	<div class="overlay">
-  		<div class="slider-trigger"></div>
-  		<h1 class="header-author js-mobile-header hide">火三</h1>
-  	</div>
-	<div class="intrude-less">
-		<header id="header" class="inner">
-			<div class="profilepic">
-				
-					<img lazy-src="nullhttp://ock9zbzms.bkt.clouddn.com/IMG_1238.JPG" class="js-avatar">
-				
-			</div>
-			<hgroup>
-			  <h1 class="header-author">火三</h1>
-			</hgroup>
-			
-			<p class="header-subtitle">学如逆水行舟，不进则退，何况逝者如斯夫，不舍昼夜</p>
-			
-			<nav class="header-menu">
-				<ul>
-				
-					<li><a href="/">主页</a></li>
-		        
-					<li><a href="/archives">所有文章</a></li>
-		        
-					<li><a href="/categories">分类</a></li>
-		        
-					<li><a href="/tags">标签</a></li>
-		        
-		        <div class="clearfix"></div>
-				</ul>
-			</nav>
-			<nav class="header-nav">
-				<div class="social">
-					
-						<a class="github" target="_blank" href="#" title="github">github</a>
-			        
-						<a class="weibo" target="_blank" href="#" title="weibo">weibo</a>
-			        
-						<a class="rss" target="_blank" href="#" title="rss">rss</a>
-			        
-						<a class="zhihu" target="_blank" href="#" title="zhihu">zhihu</a>
-			        
-				</div>
-			</nav>
-		</header>				
-	</div>
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+      
+      
+        
+        
+        <li class="menu-item menu-item-首页">
+      
+    
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
+
+  </li>
+      
+    
+      
+      
+        
+        
+        <li class="menu-item menu-item-关于">
+      
+    
+
+    <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>关于</a>
+
+  </li>
+      
+    
+      
+      
+        
+        
+        <li class="menu-item menu-item-标签">
+      
+    
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签</a>
+
+  </li>
+      
+    
+      
+      
+        
+        
+        <li class="menu-item menu-item-分类">
+      
+    
+
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类</a>
+
+  </li>
+      
+    
+      
+      
+        
+        
+        <li class="menu-item menu-item-文章">
+      
+    
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>文章</a>
+
+  </li>
+      
+    
+  </ul>
+
 </nav>
+</div>
+    </header>
 
-      <div class="body-wrap">
-  
-    <article id="post-Python学习笔记（一）" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2019/10/16/Python学习笔记（一）/" class="article-date">
-  	<time datetime="2019-10-16T13:10:40.000Z" itemprop="datePublished">2019-10-16</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
     
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/10/16/Python学习笔记（一）/">Python学习笔记（一）</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>今天开一个专题，来记录下学习python的一些笔记</p>
-<h3 id="1、-打印输出"><a href="#1、-打印输出" class="headerlink" title="1、 打印输出"></a>1、 打印输出</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#encoding:utf-8</span></div><div class="line">print(<span class="string">'hello world'</span>)</div><div class="line">print(<span class="string">'你好，世界'</span>)</div></pre></td></tr></table></figure>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li></ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a  href="/2019/10/16/Python学习笔记（一）/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
   </div>
-  
-</article>
 
 
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+            
 
+          <div class="content">
+            
 
-
-
-
-
-
-  
-    <article id="post-ios底层原理：OC对象" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2019/10/10/ios底层原理：OC对象/" class="article-date">
-  	<time datetime="2019-10-10T09:35:06.000Z" itemprop="datePublished">2019-10-10</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
+  <div class="posts-expand">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/10/10/ios底层原理：OC对象/">ios底层原理：OC对象</a>
-    </h1>
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/16/Python学习笔记（一）/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="火三">
+      <meta itemprop="description" content="学如逆水行舟，不进则退，何况逝者如斯夫，不舍昼夜兮">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="火三">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            
+            <a href="/2019/10/16/Python学习笔记（一）/" class="post-title-link" itemprop="url">Python学习笔记（一）</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-10-16 21:10:40 / 修改时间：22:59:01" itemprop="dateCreated datePublished" datetime="2019-10-16T21:10:40+08:00">2019-10-16</time>
+            </span>
+          
+            
+
+            
+          
+
+          
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">本文字数：</span>
+              
+              <span>1.7k</span>
+            </span>
+          
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              
+              <span>2 分钟</span>
+            </span>
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>今天开一个专题，来记录下学习python的一些笔记</p>
+<h3 id="1、-打印输出"><a href="#1、-打印输出" class="headerlink" title="1、 打印输出"></a>1、 打印输出</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#encoding:utf-8</span></span><br><span class="line">print(<span class="string">'hello world'</span>)</span><br><span class="line">print(<span class="string">'你好，世界'</span>)</span><br></pre></td></tr></table></figure>
+          <!--noindex-->
+          
+            <div class="post-button">
+              <a class="btn" href="/2019/10/16/Python学习笔记（一）/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
   
 
-      </header>
-      
     
-    <div class="article-entry" itemprop="articleBody">
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/10/ios底层原理：OC对象/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="火三">
+      <meta itemprop="description" content="学如逆水行舟，不进则退，何况逝者如斯夫，不舍昼夜兮">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="火三">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            
+            <a href="/2019/10/10/ios底层原理：OC对象/" class="post-title-link" itemprop="url">ios底层原理：OC对象</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-10-10 17:35:06 / 修改时间：18:26:32" itemprop="dateCreated datePublished" datetime="2019-10-10T17:35:06+08:00">2019-10-10</time>
+            </span>
+          
+            
+
+            
+          
+
+          
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">本文字数：</span>
+              
+              <span>986</span>
+            </span>
+          
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              
+              <span>1 分钟</span>
+            </span>
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
-        <h3 id="一、OC对象的本质"><a href="#一、OC对象的本质" class="headerlink" title="一、OC对象的本质"></a>一、OC对象的本质</h3><p><strong>oc的对象占多大内存空间？</strong></p>
+          <h3 id="一、OC对象的本质"><a href="#一、OC对象的本质" class="headerlink" title="一、OC对象的本质"></a>一、OC对象的本质</h3><p><strong>oc的对象占多大内存空间？</strong></p>
 <p>答案是16个字节，为什么是16个，一个oc对象内部只存放了一个isa指针，而在64位系统中，一个指针占据的空间是8字节，但是为了字节对齐，最小的内存空间分配为16个字节。</p>
-<p><img src="/2019/10/10/ios底层原理：OC对象/1.png" alt=""></p>
+<p><img src="/2019/10/10/ios底层原理：OC对象/1.png" alt></p>
 <p>oc的对象，是由类创建的，类在oc里面是Class，那么Class的本质是什么？实际上class是由c的结构体构成的。<strong>参阅runtime中的objc.h文件可知,</strong>具体实现如下</p>
+          <!--noindex-->
+          
+            <div class="post-button">
+              <a class="btn" href="/2019/10/10/ios底层原理：OC对象/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
       
     </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-      
 
-      
-        <p class="article-more-link">
-          <a  href="/2019/10/10/ios底层原理：OC对象/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
     
-  </div>
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
   
-</article>
-
-
-
-
-
-
-
-
-
   
-    <article id="post-xcode自动打包实践" class="article article-type-post" itemscope itemprop="blogPost">
   
-    <div class="article-meta">
-      <a href="/2019/09/29/xcode自动打包实践/" class="article-date">
-  	<time datetime="2019-09-29T07:47:47.000Z" itemprop="datePublished">2019-09-29</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
+
     
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/09/29/xcode自动打包实践/">xcode自动打包实践</a>
-    </h1>
   
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/29/xcode自动打包实践/">
 
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="火三">
+      <meta itemprop="description" content="学如逆水行舟，不进则退，何况逝者如斯夫，不舍昼夜兮">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="火三">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            
+            <a href="/2019/09/29/xcode自动打包实践/" class="post-title-link" itemprop="url">xcode自动打包实践</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-09-29 15:47:47 / 修改时间：16:25:50" itemprop="dateCreated datePublished" datetime="2019-09-29T15:47:47+08:00">2019-09-29</time>
+            </span>
+          
+            
+
+            
+          
+
+          
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">本文字数：</span>
+              
+              <span>8.1k</span>
+            </span>
+          
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              
+              <span>7 分钟</span>
+            </span>
+          
+
+        </div>
       </header>
-      
+
     
-    <div class="article-entry" itemprop="articleBody">
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
-        <h2 id="1、问题背景"><a href="#1、问题背景" class="headerlink" title="1、问题背景"></a>1、问题背景</h2><p>公司是家小公司，没有成熟的打包系统，开发完app之后，往往需要开发人员用xcode打包，导出ipa文件，然后手动上传到蒲公英网站，然后把下载二维码发送给测试/老板。这里面有问题</p>
+          <h2 id="1、问题背景"><a href="#1、问题背景" class="headerlink" title="1、问题背景"></a>1、问题背景</h2><p>公司是家小公司，没有成熟的打包系统，开发完app之后，往往需要开发人员用xcode打包，导出ipa文件，然后手动上传到蒲公英网站，然后把下载二维码发送给测试/老板。这里面有问题</p>
 <ol>
 <li>占用开发人员的时间和设备。</li>
 <li>不能保证每天都有可用的测试包，依赖开发人员打包。</li>
 <li>重复工作,每天都要做，效率低下。</li>
 </ol>
+          <!--noindex-->
+          
+            <div class="post-button">
+              <a class="btn" href="/2019/09/29/xcode自动打包实践/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
       
     </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-      
 
-      
-        <p class="article-more-link">
-          <a  href="/2019/09/29/xcode自动打包实践/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
     
-  </div>
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
   
-</article>
-
-
-
-
-
-
-
-
-
   
-    <article id="post-Hexo使用手册" class="article article-type-post" itemscope itemprop="blogPost">
   
-    <div class="article-meta">
-      <a href="/2019/09/19/Hexo使用手册/" class="article-date">
-  	<time datetime="2019-09-19T02:32:04.000Z" itemprop="datePublished">2019-09-19</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
+
     
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/09/19/Hexo使用手册/">Hexo使用手册</a>
-    </h1>
   
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/19/Hexo使用手册/">
 
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="火三">
+      <meta itemprop="description" content="学如逆水行舟，不进则退，何况逝者如斯夫，不舍昼夜兮">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="火三">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            
+            <a href="/2019/09/19/Hexo使用手册/" class="post-title-link" itemprop="url">Hexo使用手册</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-09-19 10:32:04 / 修改时间：11:44:49" itemprop="dateCreated datePublished" datetime="2019-09-19T10:32:04+08:00">2019-09-19</time>
+            </span>
+          
+            
+
+            
+          
+
+          
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">本文字数：</span>
+              
+              <span>144</span>
+            </span>
+          
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              
+              <span>1 分钟</span>
+            </span>
+          
+
+        </div>
       </header>
-      
+
     
-    <div class="article-entry" itemprop="articleBody">
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
-        <h2 id="Hexo手册"><a href="#Hexo手册" class="headerlink" title="Hexo手册"></a>Hexo手册</h2><h3 id="1-启动本地调试服务器"><a href="#1-启动本地调试服务器" class="headerlink" title="1.启动本地调试服务器"></a>1.启动本地调试服务器</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo server</div></pre></td></tr></table></figure>
-<h3 id="2-新建文章"><a href="#2-新建文章" class="headerlink" title="2.新建文章"></a>2.新建文章</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo new &apos;文章标题&apos;</div></pre></td></tr></table></figure>
-<h3 id="3-静态文件生成"><a href="#3-静态文件生成" class="headerlink" title="3. 静态文件生成"></a>3. 静态文件生成</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo generate</div></pre></td></tr></table></figure>
-<h3 id="4-文章发布"><a href="#4-文章发布" class="headerlink" title="4. 文章发布"></a>4. 文章发布</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo deploy</div></pre></td></tr></table></figure>
+          <h2 id="Hexo手册"><a href="#Hexo手册" class="headerlink" title="Hexo手册"></a>Hexo手册</h2><h3 id="1-启动本地调试服务器"><a href="#1-启动本地调试服务器" class="headerlink" title="1.启动本地调试服务器"></a>1.启动本地调试服务器</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure>
+<h3 id="2-新建文章"><a href="#2-新建文章" class="headerlink" title="2.新建文章"></a>2.新建文章</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new &apos;文章标题&apos;</span><br></pre></td></tr></table></figure>
+<h3 id="3-静态文件生成"><a href="#3-静态文件生成" class="headerlink" title="3. 静态文件生成"></a>3. 静态文件生成</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo generate</span><br></pre></td></tr></table></figure>
+<h3 id="4-文章发布"><a href="#4-文章发布" class="headerlink" title="4. 文章发布"></a>4. 文章发布</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
+          <!--noindex-->
+          
+            <div class="post-button">
+              <a class="btn" href="/2019/09/19/Hexo使用手册/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
       
     </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo/">Hexo</a></li></ul>
-	</div>
 
-      
-
-      
-        <p class="article-more-link">
-          <a  href="/2019/09/19/Hexo使用手册/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
     
-  </div>
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
   
-</article>
-
-
-
-
-
-
-
-
-
   
-    <article id="post-如何在iOS9系统中使用Universal-Link" class="article article-type-post" itemscope itemprop="blogPost">
   
-    <div class="article-meta">
-      <a href="/2017/06/01/如何在iOS9系统中使用Universal-Link/" class="article-date">
-  	<time datetime="2017-06-01T14:48:11.000Z" itemprop="datePublished">2017-06-01</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
+
     
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/06/01/如何在iOS9系统中使用Universal-Link/">如何在iOS9系统中使用Universal Link</a>
-    </h1>
   
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/06/01/如何在iOS9系统中使用Universal-Link/">
 
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="火三">
+      <meta itemprop="description" content="学如逆水行舟，不进则退，何况逝者如斯夫，不舍昼夜兮">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="火三">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            
+            <a href="/2017/06/01/如何在iOS9系统中使用Universal-Link/" class="post-title-link" itemprop="url">如何在iOS9系统中使用Universal Link</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2017-06-01 22:48:11" itemprop="dateCreated datePublished" datetime="2017-06-01T22:48:11+08:00">2017-06-01</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2017-06-14 23:00:55" itemprop="dateModified" datetime="2017-06-14T23:00:55+08:00">2017-06-14</time>
+              </span>
+            
+          
+
+          
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">本文字数：</span>
+              
+              <span>2.9k</span>
+            </span>
+          
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              
+              <span>3 分钟</span>
+            </span>
+          
+
+        </div>
       </header>
-      
+
     
-    <div class="article-entry" itemprop="articleBody">
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
-        <h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>​    在ios9系统中，可以通过类似打开网页的方式，通过http协议打开app。通过一个唯一的网址，可以指到app内部的一个特定的view。而不用再使用scheme。设想一下，如果twitter使用了Universal Link，如果你点击了一个twitter的链接。你的设备直接打开twitter app内相应的页面。而不是打开一个普通的网页，然后再通过这个网页打开twitter，这种体验将是非常平滑，且对用户来讲，也节省了很多不必要的操作。</p>
+          <h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>​    在ios9系统中，可以通过类似打开网页的方式，通过http协议打开app。通过一个唯一的网址，可以指到app内部的一个特定的view。而不用再使用scheme。设想一下，如果twitter使用了Universal Link，如果你点击了一个twitter的链接。你的设备直接打开twitter app内相应的页面。而不是打开一个普通的网页，然后再通过这个网页打开twitter，这种体验将是非常平滑，且对用户来讲，也节省了很多不必要的操作。</p>
+          <!--noindex-->
+          
+            <div class="post-button">
+              <a class="btn" href="/2017/06/01/如何在iOS9系统中使用Universal-Link/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
       
     </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-      
 
-      
-        <p class="article-more-link">
-          <a  href="/2017/06/01/如何在iOS9系统中使用Universal-Link/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
     
-  </div>
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
   
-</article>
-
-
-
-
-
-
-
-
-
   
-    <article id="post-关于Runtime的一些理论和实践" class="article article-type-post" itemscope itemprop="blogPost">
   
-    <div class="article-meta">
-      <a href="/2017/05/23/关于Runtime的一些理论和实践/" class="article-date">
-  	<time datetime="2017-05-23T15:21:31.000Z" itemprop="datePublished">2017-05-23</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
+
     
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/05/23/关于Runtime的一些理论和实践/">关于Runtime的一些理论和实践</a>
-    </h1>
   
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/23/关于Runtime的一些理论和实践/">
 
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="火三">
+      <meta itemprop="description" content="学如逆水行舟，不进则退，何况逝者如斯夫，不舍昼夜兮">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="火三">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            
+            <a href="/2017/05/23/关于Runtime的一些理论和实践/" class="post-title-link" itemprop="url">关于Runtime的一些理论和实践</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2017-05-23 23:21:31" itemprop="dateCreated datePublished" datetime="2017-05-23T23:21:31+08:00">2017-05-23</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2017-06-11 22:48:01" itemprop="dateModified" datetime="2017-06-11T22:48:01+08:00">2017-06-11</time>
+              </span>
+            
+          
+
+          
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">本文字数：</span>
+              
+              <span>15k</span>
+            </span>
+          
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              
+              <span>13 分钟</span>
+            </span>
+          
+
+        </div>
       </header>
-      
+
     
-    <div class="article-entry" itemprop="articleBody">
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
-        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>网上讲解Runtime的教程非常之多，有些讲的还算不错，有些感觉就是人云亦云，所以读者就应该好好甄别下学习的资料。我在本文的最后，会列出一些我认为讲的不错的参考资料，以供参考。接下来就进入正文</p>
+          <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>网上讲解Runtime的教程非常之多，有些讲的还算不错，有些感觉就是人云亦云，所以读者就应该好好甄别下学习的资料。我在本文的最后，会列出一些我认为讲的不错的参考资料，以供参考。接下来就进入正文</p>
+          <!--noindex-->
+          
+            <div class="post-button">
+              <a class="btn" href="/2017/05/23/关于Runtime的一些理论和实践/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
       
     </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-      
 
-      
-        <p class="article-more-link">
-          <a  href="/2017/05/23/关于Runtime的一些理论和实践/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
     
-  </div>
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
   
-</article>
-
-
-
-
-
-
-
-
-
   
-    <article id="post-CoreGraphicsAndAnimations-2" class="article article-type-post" itemscope itemprop="blogPost">
   
-    <div class="article-meta">
-      <a href="/2017/05/19/CoreGraphicsAndAnimations-2/" class="article-date">
-  	<time datetime="2017-05-19T15:48:14.000Z" itemprop="datePublished">2017-05-19</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
+
     
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/05/19/CoreGraphicsAndAnimations-2/">CoreGraphicsAndAnimations(2)</a>
-    </h1>
   
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/19/CoreGraphicsAndAnimations-2/">
 
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="火三">
+      <meta itemprop="description" content="学如逆水行舟，不进则退，何况逝者如斯夫，不舍昼夜兮">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="火三">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            
+            <a href="/2017/05/19/CoreGraphicsAndAnimations-2/" class="post-title-link" itemprop="url">CoreGraphicsAndAnimations(2)</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2017-05-19 23:48:14" itemprop="dateCreated datePublished" datetime="2017-05-19T23:48:14+08:00">2017-05-19</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2017-06-08 23:52:04" itemprop="dateModified" datetime="2017-06-08T23:52:04+08:00">2017-06-08</time>
+              </span>
+            
+          
+
+          
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">本文字数：</span>
+              
+              <span>7k</span>
+            </span>
+          
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              
+              <span>6 分钟</span>
+            </span>
+          
+
+        </div>
       </header>
-      
+
     
-    <div class="article-entry" itemprop="articleBody">
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
-        <h1 id="绘图（2）"><a href="#绘图（2）" class="headerlink" title="绘图（2）"></a>绘图（2）</h1><h2 id="图层合并及Flower生长动画"><a href="#图层合并及Flower生长动画" class="headerlink" title="图层合并及Flower生长动画"></a>图层合并及Flower生长动画</h2><h3 id="图层合并"><a href="#图层合并" class="headerlink" title="图层合并"></a>图层合并</h3><p>图层的合并说起来很高大上，其实实际上在IOS里面实现非常的简单，实现原理就是，先获取当前的图片绘图上下文，将当前view的layer渲染到当前的绘图上下文，之后从当前的上下文中获取图片，最后结束当前上下文。返回获取到的图片</p>
+          <h1 id="绘图（2）"><a href="#绘图（2）" class="headerlink" title="绘图（2）"></a>绘图（2）</h1><h2 id="图层合并及Flower生长动画"><a href="#图层合并及Flower生长动画" class="headerlink" title="图层合并及Flower生长动画"></a>图层合并及Flower生长动画</h2><h3 id="图层合并"><a href="#图层合并" class="headerlink" title="图层合并"></a>图层合并</h3><p>图层的合并说起来很高大上，其实实际上在IOS里面实现非常的简单，实现原理就是，先获取当前的图片绘图上下文，将当前view的layer渲染到当前的绘图上下文，之后从当前的上下文中获取图片，最后结束当前上下文。返回获取到的图片</p>
 <p>可能看代码更直观些。</p>
+          <!--noindex-->
+          
+            <div class="post-button">
+              <a class="btn" href="/2017/05/19/CoreGraphicsAndAnimations-2/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
       
     </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-      
 
-      
-        <p class="article-more-link">
-          <a  href="/2017/05/19/CoreGraphicsAndAnimations-2/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
     
-  </div>
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
   
-</article>
-
-
-
-
-
-
-
-
-
   
-    <article id="post-CoreGraphicsAndAnimation" class="article article-type-post" itemscope itemprop="blogPost">
   
-    <div class="article-meta">
-      <a href="/2017/05/12/CoreGraphicsAndAnimation/" class="article-date">
-  	<time datetime="2017-05-12T03:47:58.000Z" itemprop="datePublished">2017-05-12</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
+
     
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/05/12/CoreGraphicsAndAnimation/">CoreGraphicsAndAnimation(1)</a>
-    </h1>
   
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/12/CoreGraphicsAndAnimation/">
 
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="火三">
+      <meta itemprop="description" content="学如逆水行舟，不进则退，何况逝者如斯夫，不舍昼夜兮">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="火三">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            
+            <a href="/2017/05/12/CoreGraphicsAndAnimation/" class="post-title-link" itemprop="url">CoreGraphicsAndAnimation(1)</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2017-05-12 11:47:58" itemprop="dateCreated datePublished" datetime="2017-05-12T11:47:58+08:00">2017-05-12</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2017-06-08 23:53:03" itemprop="dateModified" datetime="2017-06-08T23:53:03+08:00">2017-06-08</time>
+              </span>
+            
+          
+
+          
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">本文字数：</span>
+              
+              <span>14k</span>
+            </span>
+          
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              
+              <span>12 分钟</span>
+            </span>
+          
+
+        </div>
       </header>
-      
+
     
-    <div class="article-entry" itemprop="articleBody">
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
-        <h1 id="绘图"><a href="#绘图" class="headerlink" title="绘图"></a>绘图</h1><h2 id="成品展示"><a href="#成品展示" class="headerlink" title="成品展示"></a>成品展示</h2><p><img src="/2017/05/12/CoreGraphicsAndAnimation/6.gif" alt="core"></p>
+          <h1 id="绘图"><a href="#绘图" class="headerlink" title="绘图"></a>绘图</h1><h2 id="成品展示"><a href="#成品展示" class="headerlink" title="成品展示"></a>成品展示</h2><p><img src="/2017/05/12/CoreGraphicsAndAnimation/6.gif" alt="core"></p>
+          <!--noindex-->
+          
+            <div class="post-button">
+              <a class="btn" href="/2017/05/12/CoreGraphicsAndAnimation/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
       
     </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-      
 
-      
-        <p class="article-more-link">
-          <a  href="/2017/05/12/CoreGraphicsAndAnimation/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
     
-  </div>
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
   
-</article>
-
-
-
-
-
-
-
-
-
   
-    <article id="post-hexo本地图片放置问题" class="article article-type-post" itemscope itemprop="blogPost">
   
-    <div class="article-meta">
-      <a href="/2017/05/06/hexo本地图片放置问题/" class="article-date">
-  	<time datetime="2017-05-06T11:00:52.000Z" itemprop="datePublished">2017-05-06</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
+
     
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/05/06/hexo本地图片放置问题/">hexo本地图片放置问题</a>
-    </h1>
   
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/06/hexo本地图片放置问题/">
 
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="火三">
+      <meta itemprop="description" content="学如逆水行舟，不进则退，何况逝者如斯夫，不舍昼夜兮">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="火三">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            
+            <a href="/2017/05/06/hexo本地图片放置问题/" class="post-title-link" itemprop="url">hexo本地图片放置问题</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2017-05-06 19:00:52 / 修改时间：19:24:36" itemprop="dateCreated datePublished" datetime="2017-05-06T19:00:52+08:00">2017-05-06</time>
+            </span>
+          
+            
+
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/转/" itemprop="url" rel="index">
+                    <span itemprop="name">转</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">本文字数：</span>
+              
+              <span>1k</span>
+            </span>
+          
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              
+              <span>1 分钟</span>
+            </span>
+          
+
+        </div>
       </header>
-      
+
     
-    <div class="article-entry" itemprop="articleBody">
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
-        <p>(转) <a href="http://www.tuicool.com/articles/umEBVfI"> 原 文 地 址 </a></p>
+          <p>(转) <a href="http://www.tuicool.com/articles/umEBVfI" target="_blank" rel="noopener"> 原 文 地 址 </a></p>
 <h2 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h2><p>在 hexo 中使用本地图片是件非常让人纠结的事情，在 markdown 里的图片地址似乎永远无法和最后生成的网页保持一致。</p>
 <p>这些问题使得我一度不愿意使用本地图片而选择用图床，但被移动运营商无耻的横条广告逼得打算上 https，图床只支持 http 就成了问题。</p>
+          <!--noindex-->
+          
+            <div class="post-button">
+              <a class="btn" href="/2017/05/06/hexo本地图片放置问题/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
       
     </div>
+
     
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/工具/">工具</a></li></ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/转/">转</a>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a  href="/2017/05/06/hexo本地图片放置问题/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
     
-  </div>
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
   
-</article>
-
-
-
-
-
-
-
-
-
   
-    <article id="post-CAReplicatorLayer探究" class="article article-type-post" itemscope itemprop="blogPost">
   
-    <div class="article-meta">
-      <a href="/2017/05/06/CAReplicatorLayer探究/" class="article-date">
-  	<time datetime="2017-05-06T10:17:14.000Z" itemprop="datePublished">2017-05-06</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
+
     
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/05/06/CAReplicatorLayer探究/">CAReplicatorLayer探究</a>
-    </h1>
   
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/06/CAReplicatorLayer探究/">
 
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="火三">
+      <meta itemprop="description" content="学如逆水行舟，不进则退，何况逝者如斯夫，不舍昼夜兮">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="火三">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            
+            <a href="/2017/05/06/CAReplicatorLayer探究/" class="post-title-link" itemprop="url">CAReplicatorLayer探究</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2017-05-06 18:17:14" itemprop="dateCreated datePublished" datetime="2017-05-06T18:17:14+08:00">2017-05-06</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2017-06-08 23:54:32" itemprop="dateModified" datetime="2017-06-08T23:54:32+08:00">2017-06-08</time>
+              </span>
+            
+          
+
+          
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">本文字数：</span>
+              
+              <span>4.7k</span>
+            </span>
+          
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              
+              <span>4 分钟</span>
+            </span>
+          
+
+        </div>
       </header>
-      
+
     
-    <div class="article-entry" itemprop="articleBody">
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
-        <h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><ol>
+          <h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><ol>
 <li>这个layer干什么用的？</li>
 <li>这个layer如何用？</li>
 <li>何种场景适合这个layer发挥？</li>
 </ol>
 <p>带着这些问题，我们上路，开始研究它。</p>
+          <!--noindex-->
+          
+            <div class="post-button">
+              <a class="btn" href="/2017/05/06/CAReplicatorLayer探究/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
       
     </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-      
 
-      
-        <p class="article-more-link">
-          <a  href="/2017/05/06/CAReplicatorLayer探究/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
     
   </div>
-  
-</article>
-
-
-
-
-
-
-
-
 
   
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+  </nav>
+
+
+
+          </div>
+          
+
+        </div>
+          
   
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
-    </nav>
-  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image"
+      src="/images/avatar.gif"
+      alt="火三">
+  <p class="site-author-name" itemprop="name">火三</p>
+  <div class="site-description" itemprop="description">学如逆水行舟，不进则退，何况逝者如斯夫，不舍昼夜兮</div>
 </div>
-      <footer id="footer">
-  <div class="outer">
-    <div id="footer-info">
-    	<div class="footer-left">
-    		&copy; 2019 火三
-    	</div>
-      	<div class="footer-right">
-      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
-      	</div>
-    </div>
-  </div>
-</footer>
-    </div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        
+          <a href="/archives">
+        
+          <span class="site-state-item-count">24</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
     
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+      
+      
+      <div class="site-state-item site-state-categories">
+        
+          
+            <a href="/categories/">
+          
+        
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">分类</span>
+        </a>
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-tags">
+        
+          
+            <a href="/tags/">
+          
+        
+        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-name">标签</span>
+        </a>
+      </div>
+    
+  </nav>
+</div>
 
 
-<script>
-	var yiliaConfig = {
-		fancybox: true,
-		mathjax: true,
-		animate: true,
-		isHome: true,
-		isPost: false,
-		isArchive: false,
-		isTag: false,
-		isCategory: false,
-		open_in_new: false,
-		root: /
-	}
-</script>
-<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
-<script src="/js/main.js"></script>
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
 
 
+      </div>
+    </main>
 
+    <footer class="footer">
+      <div class="footer-inner">
+        
 
-
-
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-    tex2jax: {
-        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
-        processEscapes: true,
-        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-    }
-});
-
-MathJax.Hub.Queue(function() {
-    var all = MathJax.Hub.getAllJax(), i;
-    for(i=0; i < all.length; i += 1) {
-        all[i].SourceElement().parentNode.className += ' has-jax';                 
-    }       
-});
-</script>
-
-<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-</script>
-
-
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">火三</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+      <span class="post-meta-item-text">站点总字数：</span>
+    
+    <span title="站点总字数">161k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
+    
+    <span title="站点阅读时长">2:26</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0
   </div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">
+      
+    主题 – <a href="https://pisces.theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v7.4.1
+  </div>
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js?v=3.1.0"></script>
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+<script src="/js/utils.js?v=7.4.1"></script><script src="/js/motion.js?v=7.4.1"></script>
+<script src="/js/schemes/pisces.js?v=7.4.1"></script>
+<script src="/js/next-boot.js?v=7.4.1"></script>
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
 </body>
 </html>

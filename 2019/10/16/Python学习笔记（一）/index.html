@@ -1,262 +1,331 @@
 <!DOCTYPE html>
-<html>
+
+
+
+
+
+<html lang="zh-CN">
 <head>
-  <meta charset="utf-8">
-  
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>Python学习笔记（一） | 火三</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="今天开一个专题，来记录下学习python的一些笔记
-1、 打印输出123#encoding:utf-8print(&apos;hello world&apos;)print(&apos;你好，世界&apos;)">
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 3.9.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.4.1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.4.1">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.4.1">
+  <link rel="mask-icon" href="/images/logo.svg?v=7.4.1" color="#222">
+
+<link rel="stylesheet" href="/css/main.css?v=7.4.1">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '7.4.1',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
+    copycode: {"enable":true,"show_result":true,"style":"default"},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: '',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"bounceLeftIn"}},
+    translation: {
+      copy_button: '复制',
+      copy_success: '复制成功',
+      copy_failure: '复制失败'
+    },
+    sidebarPadding: 40
+  };
+</script>
+
+  <meta name="description" content="今天开一个专题，来记录下学习python的一些笔记 1、 打印输出123#encoding:utf-8print(&apos;hello world&apos;)print(&apos;你好，世界&apos;)">
+<meta name="keywords" content="python">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Python学习笔记（一）">
 <meta property="og:url" content="http://yoursite.com/2019/10/16/Python学习笔记（一）/index.html">
 <meta property="og:site_name" content="火三">
-<meta property="og:description" content="今天开一个专题，来记录下学习python的一些笔记
-1、 打印输出123#encoding:utf-8print(&apos;hello world&apos;)print(&apos;你好，世界&apos;)">
-<meta property="og:updated_time" content="2019-10-16T14:59:01.329Z">
+<meta property="og:description" content="今天开一个专题，来记录下学习python的一些笔记 1、 打印输出123#encoding:utf-8print(&apos;hello world&apos;)print(&apos;你好，世界&apos;)">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-10-16T14:59:01.330Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python学习笔记（一）">
-<meta name="twitter:description" content="今天开一个专题，来记录下学习python的一些笔记
-1、 打印输出123#encoding:utf-8print(&apos;hello world&apos;)print(&apos;你好，世界&apos;)">
+<meta name="twitter:description" content="今天开一个专题，来记录下学习python的一些笔记 1、 打印输出123#encoding:utf-8print(&apos;hello world&apos;)print(&apos;你好，世界&apos;)">
+  <link rel="canonical" href="http://yoursite.com/2019/10/16/Python学习笔记（一）/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true,
+    isPage: false,
+    isArchive: false
+  };
+</script>
+
+  <title>Python学习笔记（一） | 火三</title>
   
-    <link rel="alternative" href="/atom.xml" title="火三" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="//favicon.png">
-  
-  <link rel="stylesheet" href="/css/style.css">
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
 </head>
 
-<body>
-  <div id="container">
-    <div class="left-col">
-    <div class="overlay"></div>
-<div class="intrude-less">
-	<header id="header" class="inner">
-		<a href="/" class="profilepic">
-			
-			<img lazy-src="nullhttp://ock9zbzms.bkt.clouddn.com/IMG_1238.JPG" class="js-avatar">
-			
-		</a>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
 
-		<hgroup>
-		  <h1 class="header-author"><a href="/">火三</a></h1>
-		</hgroup>
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
 
-		
-		<p class="header-subtitle">学如逆水行舟，不进则退，何况逝者如斯夫，不舍昼夜</p>
-		
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">火三</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+        <p class="site-subtitle">学如逆水行舟，不进则退，何况逝者如斯夫，不舍昼夜</p>
+      
+  </div>
 
-		
-			<div class="switch-btn">
-				<div class="icon">
-					<div class="icon-ctn">
-						<div class="icon-wrap icon-house" data-idx="0">
-							<div class="birdhouse"></div>
-							<div class="birdhouse_holes"></div>
-						</div>
-						<div class="icon-wrap icon-ribbon hide" data-idx="1">
-							<div class="ribbon"></div>
-						</div>
-						
-						<div class="icon-wrap icon-link hide" data-idx="2">
-							<div class="loopback_l"></div>
-							<div class="loopback_r"></div>
-						</div>
-						
-						
-						<div class="icon-wrap icon-me hide" data-idx="3">
-							<div class="user"></div>
-							<div class="shoulder"></div>
-						</div>
-						
-					</div>
-					
-				</div>
-				<div class="tips-box hide">
-					<div class="tips-arrow"></div>
-					<ul class="tips-inner">
-						<li>菜单</li>
-						<li>标签</li>
-						
-						<li>友情链接</li>
-						
-						
-						<li>关于我</li>
-						
-					</ul>
-				</div>
-			</div>
-		
-
-		<div class="switch-area">
-			<div class="switch-wrap">
-				<section class="switch-part switch-part1">
-					<nav class="header-menu">
-						<ul>
-						
-							<li><a href="/">主页</a></li>
-				        
-							<li><a href="/archives">所有文章</a></li>
-				        
-							<li><a href="/categories">分类</a></li>
-				        
-							<li><a href="/tags">标签</a></li>
-				        
-						</ul>
-					</nav>
-					<nav class="header-nav">
-						<div class="social">
-							
-								<a class="github" target="_blank" href="#" title="github">github</a>
-					        
-								<a class="weibo" target="_blank" href="#" title="weibo">weibo</a>
-					        
-								<a class="rss" target="_blank" href="#" title="rss">rss</a>
-					        
-								<a class="zhihu" target="_blank" href="#" title="zhihu">zhihu</a>
-					        
-						</div>
-					</nav>
-				</section>
-				
-				
-				<section class="switch-part switch-part2">
-					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/coredata学习/" style="font-size: 13.33px;">coredata学习</a> <a href="/tags/python/" style="font-size: 10px;">python</a> <a href="/tags/三方库研究/" style="font-size: 16.67px;">三方库研究</a> <a href="/tags/工具/" style="font-size: 10px;">工具</a> <a href="/tags/点点滴滴/" style="font-size: 20px;">点点滴滴</a> <a href="/tags/翻译/" style="font-size: 10px;">翻译</a>
-					</div>
-				</section>
-				
-				
-				
-				<section class="switch-part switch-part3">
-					<div id="js-friends">
-					
-			          <a target="_blank" class="main-nav-link switch-friends-link" href="https://kaisayoung.github.io/">二代的博客</a>
-			        
-			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">七牛云</a>
-			        
-			        </div>
-				</section>
-				
-
-				
-				
-				<section class="switch-part switch-part4">
-				
-					<div id="js-aboutme">我是谁，我从哪里来，我到哪里去？我就是我，是颜色不一样的吃货…</div>
-				</section>
-				
-			</div>
-		</div>
-	</header>				
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
 </div>
 
-    </div>
-    <div class="mid-col">
-      <nav id="mobile-nav">
-  	<div class="overlay">
-  		<div class="slider-trigger"></div>
-  		<h1 class="header-author js-mobile-header hide">火三</h1>
-  	</div>
-	<div class="intrude-less">
-		<header id="header" class="inner">
-			<div class="profilepic">
-				
-					<img lazy-src="nullhttp://ock9zbzms.bkt.clouddn.com/IMG_1238.JPG" class="js-avatar">
-				
-			</div>
-			<hgroup>
-			  <h1 class="header-author">火三</h1>
-			</hgroup>
-			
-			<p class="header-subtitle">学如逆水行舟，不进则退，何况逝者如斯夫，不舍昼夜</p>
-			
-			<nav class="header-menu">
-				<ul>
-				
-					<li><a href="/">主页</a></li>
-		        
-					<li><a href="/archives">所有文章</a></li>
-		        
-					<li><a href="/categories">分类</a></li>
-		        
-					<li><a href="/tags">标签</a></li>
-		        
-		        <div class="clearfix"></div>
-				</ul>
-			</nav>
-			<nav class="header-nav">
-				<div class="social">
-					
-						<a class="github" target="_blank" href="#" title="github">github</a>
-			        
-						<a class="weibo" target="_blank" href="#" title="weibo">weibo</a>
-			        
-						<a class="rss" target="_blank" href="#" title="rss">rss</a>
-			        
-						<a class="zhihu" target="_blank" href="#" title="zhihu">zhihu</a>
-			        
-				</div>
-			</nav>
-		</header>				
-	</div>
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+      
+      
+        
+        
+        <li class="menu-item menu-item-首页">
+      
+    
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
+
+  </li>
+      
+    
+      
+      
+        
+        
+        <li class="menu-item menu-item-关于">
+      
+    
+
+    <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>关于</a>
+
+  </li>
+      
+    
+      
+      
+        
+        
+        <li class="menu-item menu-item-标签">
+      
+    
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签</a>
+
+  </li>
+      
+    
+      
+      
+        
+        
+        <li class="menu-item menu-item-分类">
+      
+    
+
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类</a>
+
+  </li>
+      
+    
+      
+      
+        
+        
+        <li class="menu-item menu-item-文章">
+      
+    
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>文章</a>
+
+  </li>
+      
+    
+  </ul>
+
 </nav>
+</div>
+    </header>
 
-      <div class="body-wrap"><article id="post-Python学习笔记（一）" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2019/10/16/Python学习笔记（一）/" class="article-date">
-  	<time datetime="2019-10-16T13:10:40.000Z" itemprop="datePublished">2019-10-16</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
     
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      Python学习笔记（一）
-    </h1>
-  
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
 
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+            
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/16/Python学习笔记（一）/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="火三">
+      <meta itemprop="description" content="学如逆水行舟，不进则退，何况逝者如斯夫，不舍昼夜兮">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="火三">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            Python学习笔记（一）
+            
+
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-10-16 21:10:40 / 修改时间：22:59:01" itemprop="dateCreated datePublished" datetime="2019-10-16T21:10:40+08:00">2019-10-16</time>
+            </span>
+          
+            
+
+            
+          
+
+          
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">本文字数：</span>
+              
+              <span>1.7k</span>
+            </span>
+          
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              
+              <span>2 分钟</span>
+            </span>
+          
+
+        </div>
       </header>
-      
-      <div class="article-info article-info-post">
-        
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li></ul>
-	</div>
 
-        
-
-        <div class="clearfix"></div>
-      </div>
-      
     
-    <div class="article-entry" itemprop="articleBody">
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
         <p>今天开一个专题，来记录下学习python的一些笔记</p>
-<h3 id="1、-打印输出"><a href="#1、-打印输出" class="headerlink" title="1、 打印输出"></a>1、 打印输出</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#encoding:utf-8</span></div><div class="line">print(<span class="string">'hello world'</span>)</div><div class="line">print(<span class="string">'你好，世界'</span>)</div></pre></td></tr></table></figure>
+<h3 id="1、-打印输出"><a href="#1、-打印输出" class="headerlink" title="1、 打印输出"></a>1、 打印输出</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#encoding:utf-8</span></span><br><span class="line">print(<span class="string">'hello world'</span>)</span><br><span class="line">print(<span class="string">'你好，世界'</span>)</span><br></pre></td></tr></table></figure>
 <a id="more"></a>
-<h3 id="2、变量声明"><a href="#2、变量声明" class="headerlink" title="2、变量声明"></a>2、变量声明</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#声明一个字符串</span></div><div class="line">monday=<span class="string">'星期一'</span></div><div class="line"><span class="comment">#声明一个int类型的数字</span></div><div class="line">one=<span class="number">1</span></div><div class="line"><span class="comment">#声明一个浮点类型的数字</span></div><div class="line">pi=<span class="number">3.14</span></div><div class="line"><span class="comment">#声明一个数组</span></div><div class="line">arr=[<span class="string">'1'</span>,<span class="string">'2'</span>,<span class="number">2222</span>]</div><div class="line"><span class="comment">#声明一个字段</span></div><div class="line">dic=&#123;<span class="string">'name'</span>:<span class="string">'成焱'</span>,<span class="string">'age'</span>:<span class="number">22</span>&#125;</div><div class="line"><span class="comment">#声明一个bool类型的</span></div><div class="line">boolvalue=<span class="keyword">False</span></div></pre></td></tr></table></figure>
+<h3 id="2、变量声明"><a href="#2、变量声明" class="headerlink" title="2、变量声明"></a>2、变量声明</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#声明一个字符串</span></span><br><span class="line">monday=<span class="string">'星期一'</span></span><br><span class="line"><span class="comment">#声明一个int类型的数字</span></span><br><span class="line">one=<span class="number">1</span></span><br><span class="line"><span class="comment">#声明一个浮点类型的数字</span></span><br><span class="line">pi=<span class="number">3.14</span></span><br><span class="line"><span class="comment">#声明一个数组</span></span><br><span class="line">arr=[<span class="string">'1'</span>,<span class="string">'2'</span>,<span class="number">2222</span>]</span><br><span class="line"><span class="comment">#声明一个字段</span></span><br><span class="line">dic=&#123;<span class="string">'name'</span>:<span class="string">'成焱'</span>,<span class="string">'age'</span>:<span class="number">22</span>&#125;</span><br><span class="line"><span class="comment">#声明一个bool类型的</span></span><br><span class="line">boolvalue=<span class="literal">False</span></span><br></pre></td></tr></table></figure>
 <h3 id="3、常用字符串操作函数"><a href="#3、常用字符串操作函数" class="headerlink" title="3、常用字符串操作函数"></a>3、常用字符串操作函数</h3><ul>
 <li><strong>求字符串长度</strong></li>
 </ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">stringlength=len(monday)</div></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">stringlength=len(monday)</span><br></pre></td></tr></table></figure>
 <ul>
 <li><strong>字符串拼接</strong></li>
 </ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">string1=<span class="string">'你好'</span></div><div class="line">string2=<span class="string">'成焱'</span></div><div class="line">string3=string1+string2</div></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">string1=<span class="string">'你好'</span></span><br><span class="line">string2=<span class="string">'成焱'</span></span><br><span class="line">string3=string1+string2</span><br></pre></td></tr></table></figure>
 <ul>
 <li><strong>格式化字符串输出</strong></li>
 </ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">Python转换说明符</div><div class="line">转换说明符	说明</div><div class="line">%d，%i	转换为带符号的十进制形式的整数</div><div class="line">%o	转换为带符号的八进制形式的整数</div><div class="line">%x，%X	转换为带符号的十六进制形式的整数</div><div class="line">%e	转化为科学计数法表示的浮点数（e 小写）</div><div class="line">%E	转化为科学计数法表示的浮点数（E 大写）</div><div class="line">%f，%F	转化为十进制形式的浮点数</div><div class="line">%g	智能选择使用 %f 或 %e 格式</div><div class="line">%G	智能选择使用 %F 或 %E 格式</div><div class="line">%c	格式化字符及其 ASCII 码</div><div class="line">%r	使用 repr() 将变量或表达式转换为字符串</div><div class="line">%s	使用 str() 将变量或表达式转换为字符串</div><div class="line"></div><div class="line">如</div><div class="line">print(monday+<span class="string">'%d'</span>%one)</div><div class="line">输出：星期一<span class="number">1</span></div></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">Python转换说明符</span><br><span class="line">转换说明符	说明</span><br><span class="line">%d，%i	转换为带符号的十进制形式的整数</span><br><span class="line">%o	转换为带符号的八进制形式的整数</span><br><span class="line">%x，%X	转换为带符号的十六进制形式的整数</span><br><span class="line">%e	转化为科学计数法表示的浮点数（e 小写）</span><br><span class="line">%E	转化为科学计数法表示的浮点数（E 大写）</span><br><span class="line">%f，%F	转化为十进制形式的浮点数</span><br><span class="line">%g	智能选择使用 %f 或 %e 格式</span><br><span class="line">%G	智能选择使用 %F 或 %E 格式</span><br><span class="line">%c	格式化字符及其 ASCII 码</span><br><span class="line">%r	使用 repr() 将变量或表达式转换为字符串</span><br><span class="line">%s	使用 str() 将变量或表达式转换为字符串</span><br><span class="line"></span><br><span class="line">如</span><br><span class="line">print(monday+<span class="string">'%d'</span>%one)</span><br><span class="line">输出：星期一<span class="number">1</span></span><br></pre></td></tr></table></figure>
 <h3 id="4、数据类型转换"><a href="#4、数据类型转换" class="headerlink" title="4、数据类型转换"></a>4、数据类型转换</h3><ol>
 <li>int(x) ： x为数字或字符串型的数字</li>
 <li>float(x)：x为数字为字符串型的数字</li>
@@ -268,153 +337,287 @@
 <li>chr(x)：将10进制数转为ASCII码</li>
 <li>ord(x)：将ASCII字符转为10进制数</li>
 </ol>
-<h3 id="5、条件控制语句"><a href="#5、条件控制语句" class="headerlink" title="5、条件控制语句"></a>5、条件控制语句</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">isBoy=<span class="keyword">True</span></div><div class="line"></div><div class="line"><span class="comment">#单层判断</span></div><div class="line"><span class="keyword">if</span> isBoy:</div><div class="line">  print(<span class="string">'男孩'</span>)</div><div class="line"></div><div class="line"><span class="comment">#双重判断</span></div><div class="line"><span class="keyword">if</span> isBoy:</div><div class="line">	print(<span class="string">'男孩'</span>)</div><div class="line"><span class="keyword">else</span>:</div><div class="line">	print(<span class="string">'女孩'</span>)</div><div class="line">  </div><div class="line"><span class="comment">#多重判断</span></div><div class="line"><span class="keyword">if</span> <span class="number">1</span>:</div><div class="line">	print(<span class="number">2</span>)</div><div class="line"><span class="keyword">elif</span> <span class="number">2</span>:</div><div class="line">	print(<span class="number">32</span>)</div><div class="line"><span class="keyword">else</span>:</div><div class="line">	print(<span class="number">3</span>)</div></pre></td></tr></table></figure>
+<h3 id="5、条件控制语句"><a href="#5、条件控制语句" class="headerlink" title="5、条件控制语句"></a>5、条件控制语句</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">isBoy=<span class="literal">True</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#单层判断</span></span><br><span class="line"><span class="keyword">if</span> isBoy:</span><br><span class="line">  print(<span class="string">'男孩'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#双重判断</span></span><br><span class="line"><span class="keyword">if</span> isBoy:</span><br><span class="line">	print(<span class="string">'男孩'</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">	print(<span class="string">'女孩'</span>)</span><br><span class="line">  </span><br><span class="line"><span class="comment">#多重判断</span></span><br><span class="line"><span class="keyword">if</span> <span class="number">1</span>:</span><br><span class="line">	print(<span class="number">2</span>)</span><br><span class="line"><span class="keyword">elif</span> <span class="number">2</span>:</span><br><span class="line">	print(<span class="number">32</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">	print(<span class="number">3</span>)</span><br></pre></td></tr></table></figure>
 <h3 id="6、循环控制语句"><a href="#6、循环控制语句" class="headerlink" title="6、循环控制语句"></a>6、循环控制语句</h3><ul>
 <li><strong>for循环</strong> </li>
 </ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">10</span>):</div><div class="line">	print(i)</div><div class="line"></div><div class="line"><span class="comment">#输出</span></div><div class="line"><span class="number">0</span></div><div class="line"><span class="number">1</span></div><div class="line"><span class="number">2</span></div><div class="line"><span class="number">3</span></div><div class="line"><span class="number">4</span></div><div class="line"><span class="number">5</span></div><div class="line"><span class="number">6</span></div><div class="line"><span class="number">7</span></div><div class="line"><span class="number">8</span></div><div class="line"><span class="number">9</span></div></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">10</span>):</span><br><span class="line">	print(i)</span><br><span class="line"></span><br><span class="line"><span class="comment">#输出</span></span><br><span class="line"><span class="number">0</span></span><br><span class="line"><span class="number">1</span></span><br><span class="line"><span class="number">2</span></span><br><span class="line"><span class="number">3</span></span><br><span class="line"><span class="number">4</span></span><br><span class="line"><span class="number">5</span></span><br><span class="line"><span class="number">6</span></span><br><span class="line"><span class="number">7</span></span><br><span class="line"><span class="number">8</span></span><br><span class="line"><span class="number">9</span></span><br></pre></td></tr></table></figure>
 <ul>
 <li><strong>带步长循环打印</strong></li>
 </ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">0</span>,<span class="number">10</span>, <span class="number">2</span>):</div><div class="line">	print(i)</div><div class="line"><span class="comment">#输出</span></div><div class="line"><span class="number">0</span></div><div class="line"><span class="number">2</span></div><div class="line"><span class="number">4</span></div><div class="line"><span class="number">6</span></div><div class="line"><span class="number">8</span></div></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">0</span>,<span class="number">10</span>, <span class="number">2</span>):</span><br><span class="line">	print(i)</span><br><span class="line"><span class="comment">#输出</span></span><br><span class="line"><span class="number">0</span></span><br><span class="line"><span class="number">2</span></span><br><span class="line"><span class="number">4</span></span><br><span class="line"><span class="number">6</span></span><br><span class="line"><span class="number">8</span></span><br></pre></td></tr></table></figure>
 <ul>
 <li><strong>循环一个数组</strong></li>
 </ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span> var <span class="keyword">in</span> arr:</div><div class="line">	print(var)</div><div class="line"><span class="comment">#输出</span></div><div class="line"><span class="number">1</span></div><div class="line"><span class="number">2</span></div><div class="line"><span class="number">2222</span></div></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> var <span class="keyword">in</span> arr:</span><br><span class="line">	print(var)</span><br><span class="line"><span class="comment">#输出</span></span><br><span class="line"><span class="number">1</span></span><br><span class="line"><span class="number">2</span></span><br><span class="line"><span class="number">2222</span></span><br></pre></td></tr></table></figure>
 <ul>
 <li><strong>while 循环</strong></li>
 </ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">i = <span class="number">0</span></div><div class="line"><span class="keyword">while</span> i &lt; <span class="number">3</span>:</div><div class="line">	print(i)</div><div class="line">	i+=<span class="number">1</span></div><div class="line"><span class="comment">#输出  </span></div><div class="line"><span class="number">0</span></div><div class="line"><span class="number">1</span></div><div class="line"><span class="number">2</span></div></pre></td></tr></table></figure>
-<h3 id="7、成员运算符-in，not-in"><a href="#7、成员运算符-in，not-in" class="headerlink" title="7、成员运算符 in，not in"></a>7、成员运算符 in，not in</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span> <span class="number">2</span> <span class="keyword">in</span> range(<span class="number">10</span>):</div><div class="line">  print(<span class="string">'2在集合中'</span>)</div><div class="line"><span class="keyword">else</span>:</div><div class="line">  print(<span class="string">'2不在集合中'</span>)</div><div class="line">  </div><div class="line">animals=[<span class="string">'猫'</span>,<span class="string">'狗'</span>,<span class="string">'猪'</span>]</div><div class="line"><span class="keyword">if</span> <span class="string">'桌子'</span> <span class="keyword">not</span> <span class="keyword">in</span> animals:</div><div class="line">  print(<span class="string">'桌子不属于动物'</span>)</div><div class="line"><span class="keyword">else</span>:</div><div class="line">  print(<span class="string">'桌子属于动物'</span>)</div></pre></td></tr></table></figure>
-<h3 id="8、身份运算符-is-，is-not"><a href="#8、身份运算符-is-，is-not" class="headerlink" title="8、身份运算符 is ，is not"></a>8、身份运算符 is ，is not</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">i = <span class="number">1</span></div><div class="line">j = <span class="number">1</span></div><div class="line"></div><div class="line"><span class="keyword">if</span> i <span class="keyword">is</span> j:</div><div class="line">	print(<span class="string">'i 就是 j'</span>)</div><div class="line"><span class="keyword">else</span>:</div><div class="line">	print(<span class="string">'i 不是 j'</span>)</div><div class="line"></div><div class="line"><span class="comment">#输出：</span></div><div class="line">i 就是 j</div><div class="line"></div><div class="line">name1=<span class="string">'成焱'</span></div><div class="line">nickname=<span class="string">'chengyan'</span></div><div class="line"><span class="keyword">if</span> name1 <span class="keyword">is</span> <span class="keyword">not</span> nickname:</div><div class="line">	print(<span class="string">'成焱不是chengyan'</span>)</div><div class="line"><span class="keyword">else</span>:</div><div class="line">	print(<span class="string">'成焱就是chengyan'</span>)</div><div class="line">  </div><div class="line"><span class="comment">#输出</span></div><div class="line">成焱不是chengyan</div></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">i = <span class="number">0</span></span><br><span class="line"><span class="keyword">while</span> i &lt; <span class="number">3</span>:</span><br><span class="line">	print(i)</span><br><span class="line">	i+=<span class="number">1</span></span><br><span class="line"><span class="comment">#输出  </span></span><br><span class="line"><span class="number">0</span></span><br><span class="line"><span class="number">1</span></span><br><span class="line"><span class="number">2</span></span><br></pre></td></tr></table></figure>
+<h3 id="7、成员运算符-in，not-in"><a href="#7、成员运算符-in，not-in" class="headerlink" title="7、成员运算符 in，not in"></a>7、成员运算符 in，not in</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> <span class="number">2</span> <span class="keyword">in</span> range(<span class="number">10</span>):</span><br><span class="line">  print(<span class="string">'2在集合中'</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">  print(<span class="string">'2不在集合中'</span>)</span><br><span class="line">  </span><br><span class="line">animals=[<span class="string">'猫'</span>,<span class="string">'狗'</span>,<span class="string">'猪'</span>]</span><br><span class="line"><span class="keyword">if</span> <span class="string">'桌子'</span> <span class="keyword">not</span> <span class="keyword">in</span> animals:</span><br><span class="line">  print(<span class="string">'桌子不属于动物'</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">  print(<span class="string">'桌子属于动物'</span>)</span><br></pre></td></tr></table></figure>
+<h3 id="8、身份运算符-is-，is-not"><a href="#8、身份运算符-is-，is-not" class="headerlink" title="8、身份运算符 is ，is not"></a>8、身份运算符 is ，is not</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">i = <span class="number">1</span></span><br><span class="line">j = <span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> i <span class="keyword">is</span> j:</span><br><span class="line">	print(<span class="string">'i 就是 j'</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">	print(<span class="string">'i 不是 j'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#输出：</span></span><br><span class="line">i 就是 j</span><br><span class="line"></span><br><span class="line">name1=<span class="string">'成焱'</span></span><br><span class="line">nickname=<span class="string">'chengyan'</span></span><br><span class="line"><span class="keyword">if</span> name1 <span class="keyword">is</span> <span class="keyword">not</span> nickname:</span><br><span class="line">	print(<span class="string">'成焱不是chengyan'</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">	print(<span class="string">'成焱就是chengyan'</span>)</span><br><span class="line">  </span><br><span class="line"><span class="comment">#输出</span></span><br><span class="line">成焱不是chengyan</span><br></pre></td></tr></table></figure>
 <h3 id="小结："><a href="#小结：" class="headerlink" title="小结："></a>小结：</h3><p>本篇就先学习到这里，回顾下，本篇主要学习了python如何打印输出、字符串的常见操作、变量的声明、条件控制语句、数据类型转换、格式化输出字符串、身份变量符和成员变量符，下一节学习列表与元组、字典，see u tomorrow！</p>
 
+    </div>
+
+    
+    
+    
+        <div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center;">
+  <img id="wechat_subscriber_qcode" src="/images/wechat_qcode.jpeg" alt="火三 wechat" style="width: 200px; max-width: 100%;">
+  <div>扫码二维码，关注我的公众号，一起交流学习</div>
+</div>
+
       
-    </div>
-    
+        
+      
+        <div class="reward-container">
+  <div></div>
+  <button disable="enable" onclick="var qr = document.getElementById(&quot;qr&quot;); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    打赏
+  </button>
+  <div id="qr" style="display: none;">
+        
+      
+      <div style="display: inline-block;">
+        <img src="/images/wechatpay.png" alt="火三 微信支付">
+        <p>微信支付</p>
+      </div>
+        
+      
+      <div style="display: inline-block;">
+        <img src="/images/alipay.png" alt="火三 支付宝">
+        <p>支付宝</p>
+      </div>
+
   </div>
-  
+</div>
+
+      
+
+      <footer class="post-footer">
+          
+            
+          
+          <div class="post-tags">
+            
+              <a href="/tags/python/" rel="tag"># python</a>
+            
+          </div>
+        
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-next post-nav-item">
+              
+                <a href="/2019/10/10/ios底层原理：OC对象/" rel="next" title="ios底层原理：OC对象">
+                  <i class="fa fa-chevron-left"></i> ios底层原理：OC对象
+                </a>
+              
+            </div>
+
+            <span class="post-nav-divider"></span>
+
+            <div class="post-nav-prev post-nav-item">
+              
+            </div>
+          </div>
+        
+      </footer>
     
-<nav id="article-nav">
+  </article>
   
   
-    <a href="/2019/10/10/ios底层原理：OC对象/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">ios底层原理：OC对象</div>
-      <strong class="article-nav-caption">></strong>
-    </a>
   
-</nav>
 
-  
-</article>
+  </div>
 
 
-<div class="share_jia">
-	<!-- JiaThis Button BEGIN -->
-	<div class="jiathis_style">
-		<span class="jiathis_txt">分享到: &nbsp; </span>
-		<a class="jiathis_button_facebook"></a> 
-    <a class="jiathis_button_twitter"></a>
-    <a class="jiathis_button_plus"></a> 
-    <a class="jiathis_button_tsina"></a>
-		<a class="jiathis_button_cqq"></a>
-		<a class="jiathis_button_douban"></a>
-		<a class="jiathis_button_weixin"></a>
-		<a class="jiathis_button_tumblr"></a>
-    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
-	</div>
-	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
-	<!-- JiaThis Button END -->
+          </div>
+          
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+        
+        
+        
+        
+      
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1、-打印输出"><span class="nav-number">1.</span> <span class="nav-text">1、 打印输出</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2、变量声明"><span class="nav-number">2.</span> <span class="nav-text">2、变量声明</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3、常用字符串操作函数"><span class="nav-number">3.</span> <span class="nav-text">3、常用字符串操作函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4、数据类型转换"><span class="nav-number">4.</span> <span class="nav-text">4、数据类型转换</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5、条件控制语句"><span class="nav-number">5.</span> <span class="nav-text">5、条件控制语句</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6、循环控制语句"><span class="nav-number">6.</span> <span class="nav-text">6、循环控制语句</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7、成员运算符-in，not-in"><span class="nav-number">7.</span> <span class="nav-text">7、成员运算符 in，not in</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8、身份运算符-is-，is-not"><span class="nav-number">8.</span> <span class="nav-text">8、身份运算符 is ，is not</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#小结："><span class="nav-number">9.</span> <span class="nav-text">小结：</span></a></li></ol></div>
+        
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image"
+      src="/images/avatar.gif"
+      alt="火三">
+  <p class="site-author-name" itemprop="name">火三</p>
+  <div class="site-description" itemprop="description">学如逆水行舟，不进则退，何况逝者如斯夫，不舍昼夜兮</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        
+          <a href="/archives">
+        
+          <span class="site-state-item-count">24</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-categories">
+        
+          
+            <a href="/categories/">
+          
+        
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">分类</span>
+        </a>
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-tags">
+        
+          
+            <a href="/tags/">
+          
+        
+        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-name">标签</span>
+        </a>
+      </div>
+    
+  </nav>
 </div>
 
 
 
+      </div>
 
-
-
-<div class="duoshuo">
-	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="Python学习笔记（一）" data-title="Python学习笔记（一）" data-url="http://yoursite.com/2019/10/16/Python学习笔记（一）/"></div>
-	<!-- 多说评论框 end -->
-	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-	<script type="text/javascript">
-	var duoshuoQuery = {short_name:"true"};
-	(function() {
-		var ds = document.createElement('script');
-		ds.type = 'text/javascript';ds.async = true;
-		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-		ds.charset = 'UTF-8';
-		(document.getElementsByTagName('head')[0] 
-		 || document.getElementsByTagName('body')[0]).appendChild(ds);
-	})();
-	</script>
-	<!-- 多说公共JS代码 end -->
-</div>
-
-
-
-
-</div>
-      <footer id="footer">
-  <div class="outer">
-    <div id="footer-info">
-    	<div class="footer-left">
-    		&copy; 2019 火三
-    	</div>
-      	<div class="footer-right">
-      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
-      	</div>
     </div>
-  </div>
-</footer>
-    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">火三</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+      <span class="post-meta-item-text">站点总字数：</span>
     
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-
-
-<script>
-	var yiliaConfig = {
-		fancybox: true,
-		mathjax: true,
-		animate: true,
-		isHome: false,
-		isPost: true,
-		isArchive: false,
-		isTag: false,
-		isCategory: false,
-		open_in_new: false,
-		root: /
-	}
-</script>
-<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
-<script src="/js/main.js"></script>
-
-
-
-
-
-
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-    tex2jax: {
-        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
-        processEscapes: true,
-        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-    }
-});
-
-MathJax.Hub.Queue(function() {
-    var all = MathJax.Hub.getAllJax(), i;
-    for(i=0; i < all.length; i += 1) {
-        all[i].SourceElement().parentNode.className += ' has-jax';                 
-    }       
-});
-</script>
-
-<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-</script>
-
-
+    <span title="站点总字数">161k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
+    
+    <span title="站点阅读时长">2:26</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0
   </div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">
+      
+    主题 – <a href="https://pisces.theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v7.4.1
+  </div>
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js?v=3.1.0"></script>
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+<script src="/js/utils.js?v=7.4.1"></script><script src="/js/motion.js?v=7.4.1"></script>
+<script src="/js/schemes/pisces.js?v=7.4.1"></script>
+<script src="/js/next-boot.js?v=7.4.1"></script>
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
 </body>
 </html>
