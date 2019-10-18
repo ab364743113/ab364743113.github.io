@@ -370,7 +370,7 @@
                 
               
 
-              <time title="创建时间：2019-10-17 18:10:32 / 修改时间：22:20:52" itemprop="dateCreated datePublished" datetime="2019-10-17T18:10:32+08:00">2019-10-17</time>
+              <time title="创建时间：2019-10-17 18:10:32 / 修改时间：22:22:50" itemprop="dateCreated datePublished" datetime="2019-10-17T18:10:32+08:00">2019-10-17</time>
             </span>
           
             
@@ -419,201 +419,15 @@
 <li><strong>数组元素的获取</strong>，支持根据下标进行获取</li>
 </ul>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#根据下标获取</span></span><br><span class="line">print(list[<span class="number">0</span>])</span><br><span class="line"><span class="comment">#将会打印1</span></span><br></pre></td></tr></table></figure>
-<ul>
-<li><strong>列表常用的方法</strong></li>
-</ul>
-<table>
-<thead>
-<tr>
-<th>方法名称</th>
-<th>方法功能描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>append</td>
-<td>在列表尾部拼接元素</td>
-</tr>
-<tr>
-<td>clear</td>
-<td>列表清空（python3.3之后支持）</td>
-</tr>
-<tr>
-<td>copy</td>
-<td>复制生成另一个列表（3.3后支持）</td>
-</tr>
-<tr>
-<td>count</td>
-<td>统计指定元素个数</td>
-</tr>
-<tr>
-<td>extend</td>
-<td>合并两个列表</td>
-</tr>
-<tr>
-<td>index</td>
-<td>获取指定元素的下标</td>
-</tr>
-<tr>
-<td>insert</td>
-<td>在指定位置插入元素</td>
-</tr>
-<tr>
-<td>pop</td>
-<td>删除指定下标元素</td>
-</tr>
-<tr>
-<td>remove</td>
-<td>删除某个元素，元素需要在列表中，否则会报错</td>
-</tr>
-<tr>
-<td>reverse</td>
-<td>反转列表</td>
-</tr>
-<tr>
-<td>sort</td>
-<td>对列表进行排序</td>
-</tr>
-</tbody>
-</table>
-<h3 id="二、元组"><a href="#二、元组" class="headerlink" title="二、元组"></a>二、元组</h3><p>元组与列表的区别在于：1. 元组不能对其元素进行变动，而列表可以。2. 元组用（）括起来，而列表用[]括起来</p>
-<ul>
-<li><p>元组的声明</p>
-<ul>
-<li>简单版</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#声明一个空元组</span></span><br><span class="line">tuple=()</span><br><span class="line"><span class="comment">#简单声明一个元组</span></span><br><span class="line">tuple1=(<span class="string">'name'</span>,<span class="string">'age'</span>)</span><br></pre></td></tr></table></figure>
-<ul>
-<li>进阶版</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#省略（）的元组</span></span><br><span class="line">name,age=<span class="string">'chengyan'</span>,<span class="number">18</span></span><br><span class="line">person=(name,age)</span><br><span class="line">print(person)</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>元组的基本操作</p>
-</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th>方法名称</th>
-<th>方法功能描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>count</td>
-<td>统计指定元素的个数</td>
-</tr>
-<tr>
-<td>index</td>
-<td>返回指定元素的下标</td>
-</tr>
-</tbody>
-</table>
-<table>
-<thead>
-<tr>
-<th>函数名称</th>
-<th>函数功能描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>len</td>
-<td>统计元组元素个数</td>
-</tr>
-<tr>
-<td>max</td>
-<td>返回元组中最大值的元素</td>
-</tr>
-<tr>
-<td>min</td>
-<td>返回元组中最小值的元素</td>
-</tr>
-<tr>
-<td>tuple</td>
-<td>将列表转换为元组</td>
-</tr>
-<tr>
-<td>type</td>
-<td>返回对象类型</td>
-</tr>
-<tr>
-<td>del</td>
-<td>删除整个元组对象</td>
-</tr>
-<tr>
-<td>sum</td>
-<td>对元组所有元素求和</td>
-</tr>
-</tbody>
-</table>
-<h3 id="三、字典"><a href="#三、字典" class="headerlink" title="三、字典"></a>三、字典</h3><ul>
-<li><strong>创建字典</strong></li>
-</ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dic=&#123;<span class="string">'name'</span>:<span class="string">'chengyan'</span>,<span class="string">'age'</span>:<span class="number">18</span>&#125;</span><br></pre></td></tr></table></figure>
-<ul>
-<li>字典的常用方法</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th>方法名称</th>
-<th>方法功能描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>clear</td>
-<td>字典清空</td>
-</tr>
-<tr>
-<td>copy</td>
-<td>复制生成另一个字典</td>
-</tr>
-<tr>
-<td>fromkeys</td>
-<td>使用给定的key建立新的字典，值默认为None</td>
-</tr>
-<tr>
-<td>get</td>
-<td>返回key对应的值</td>
-</tr>
-<tr>
-<td>items</td>
-<td>以元组数组的方式返回字典中的元素</td>
-</tr>
-<tr>
-<td>keys</td>
-<td>以列表的形式返回字典中的keys</td>
-</tr>
-<tr>
-<td>pop</td>
-<td>删除指定键的值，并返回该值</td>
-</tr>
-<tr>
-<td>popitem</td>
-<td>随机返回元素，并删除元素，以元组的形式</td>
-</tr>
-<tr>
-<td>setdefault</td>
-<td>当字典中的键不存在的时候，设置值，如存在时，返回对应的值</td>
-</tr>
-<tr>
-<td>update</td>
-<td>利用一个字典去更新另外一个字典</td>
-</tr>
-<tr>
-<td>values</td>
-<td>返回字典中的值</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li><strong>一些示例</strong></li>
-</ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">dic=&#123;<span class="string">'name'</span>:<span class="string">'chengyan'</span>&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">#新增元素</span></span><br><span class="line">dic[<span class="string">'age'</span>]=<span class="number">18</span></span><br><span class="line"><span class="comment">#如果没有，设置默认值，有，不做操作</span></span><br><span class="line">dic.setdefault(<span class="string">'name'</span>,<span class="string">'wangqi'</span>)</span><br><span class="line"><span class="comment">#查询</span></span><br><span class="line">name = dic[<span class="string">'name'</span>]</span><br><span class="line">name = dic.get(<span class="string">'name'</span>)</span><br><span class="line"><span class="comment">#修改</span></span><br><span class="line">dic[<span class="string">'name'</span>]=<span class="string">'wangqi'</span></span><br><span class="line">dic.update(<span class="string">'name'</span>,<span class="string">'wangqi'</span>)</span><br><span class="line"><span class="comment">#删除</span></span><br><span class="line">dic.pop(<span class="string">'name'</span>)</span><br><span class="line"><span class="keyword">del</span>(dic[<span class="string">'name'</span>])</span><br><span class="line"><span class="comment">#随机删除一个并返回该元组</span></span><br><span class="line">dic.popitem()</span><br><span class="line"><span class="comment">#遍历</span></span><br><span class="line"><span class="keyword">for</span> tuple <span class="keyword">in</span> dic:</span><br><span class="line">  print(tuple)</span><br><span class="line"><span class="keyword">for</span> key <span class="keyword">in</span> dic:</span><br><span class="line">	print(key)</span><br><span class="line"><span class="keyword">for</span> key <span class="keyword">in</span> dic:</span><br><span class="line">  print(dic[key])</span><br><span class="line"><span class="comment">#fromkeys方式创建字典</span></span><br><span class="line">dic1=&#123;&#125;.fromkeys[<span class="string">'name'</span>,<span class="string">'age'</span>,<span class="string">'class'</span>,<span class="string">'school'</span>]</span><br></pre></td></tr></table></figure>
-<h3 id="四、小结"><a href="#四、小结" class="headerlink" title="四、小结"></a>四、小结</h3><p>这一节，基本了解了元组、列表、字典的创建、以及一些常用的方法。下节学习下函数，see u</p>
-
+          <!--noindex-->
+          
+            <div class="post-button">
+              <a class="btn" href="/2019/10/17/Python学习笔记（二）/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
