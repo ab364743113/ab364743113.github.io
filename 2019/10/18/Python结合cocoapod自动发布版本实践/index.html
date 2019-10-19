@@ -55,19 +55,19 @@
   };
 </script>
 
-  <meta name="description" content="一、诉求hexo使用了好几年了，使用的版本一直是3.2.0, node 版本也是4.5.9版本，当前很多的node_models要去的版本都是6.0以上了，所以今天对hexo和node进行一次升级，全部都升级到最新版本。 hexo-&amp;gt;3.9.0 node-&amp;gt;10.16.3 具体带来的好处是页面打开速度加快、使用最新的插件，升级完成之后，可以支持文章字数统计和阅读时间统计。此外，还有一点">
-<meta name="keywords" content="Hexo">
+  <meta name="description" content="一、问题ios开发人员可能对cocoapod比较熟悉，在维护个人的cocoapod版本的时候，会遇到一个问题，那么就是本地代码库修改了文件，一般需要做如下三步操作  代码功能开发完毕，提交代码到git服务器 修改.podspec文件中的版本号 给对应的提交打上tag，以便pod发布时需要 使用pod trunk push 命令，发布到cocoapod  步骤比较多，修改版本和打tag，有时候容易遗">
+<meta name="keywords" content="python">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hexo升级3.9.0实践">
-<meta property="og:url" content="http://yoursite.com/2019/10/17/Hexo升级3-9-0实践/index.html">
+<meta property="og:title" content="Python结合cocoapod自动发布版本实践">
+<meta property="og:url" content="http://yoursite.com/2019/10/18/Python结合cocoapod自动发布版本实践/index.html">
 <meta property="og:site_name" content="火三">
-<meta property="og:description" content="一、诉求hexo使用了好几年了，使用的版本一直是3.2.0, node 版本也是4.5.9版本，当前很多的node_models要去的版本都是6.0以上了，所以今天对hexo和node进行一次升级，全部都升级到最新版本。 hexo-&amp;gt;3.9.0 node-&amp;gt;10.16.3 具体带来的好处是页面打开速度加快、使用最新的插件，升级完成之后，可以支持文章字数统计和阅读时间统计。此外，还有一点">
+<meta property="og:description" content="一、问题ios开发人员可能对cocoapod比较熟悉，在维护个人的cocoapod版本的时候，会遇到一个问题，那么就是本地代码库修改了文件，一般需要做如下三步操作  代码功能开发完毕，提交代码到git服务器 修改.podspec文件中的版本号 给对应的提交打上tag，以便pod发布时需要 使用pod trunk push 命令，发布到cocoapod  步骤比较多，修改版本和打tag，有时候容易遗">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-10-17T10:39:27.092Z">
+<meta property="og:updated_time" content="2019-10-18T07:40:13.850Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo升级3.9.0实践">
-<meta name="twitter:description" content="一、诉求hexo使用了好几年了，使用的版本一直是3.2.0, node 版本也是4.5.9版本，当前很多的node_models要去的版本都是6.0以上了，所以今天对hexo和node进行一次升级，全部都升级到最新版本。 hexo-&amp;gt;3.9.0 node-&amp;gt;10.16.3 具体带来的好处是页面打开速度加快、使用最新的插件，升级完成之后，可以支持文章字数统计和阅读时间统计。此外，还有一点">
-  <link rel="canonical" href="http://yoursite.com/2019/10/17/Hexo升级3-9-0实践/">
+<meta name="twitter:title" content="Python结合cocoapod自动发布版本实践">
+<meta name="twitter:description" content="一、问题ios开发人员可能对cocoapod比较熟悉，在维护个人的cocoapod版本的时候，会遇到一个问题，那么就是本地代码库修改了文件，一般需要做如下三步操作  代码功能开发完毕，提交代码到git服务器 修改.podspec文件中的版本号 给对应的提交打上tag，以便pod发布时需要 使用pod trunk push 命令，发布到cocoapod  步骤比较多，修改版本和打tag，有时候容易遗">
+  <link rel="canonical" href="http://yoursite.com/2019/10/18/Python结合cocoapod自动发布版本实践/">
 
 
 <script id="page-configurations">
@@ -81,7 +81,7 @@
   };
 </script>
 
-  <title>Hexo升级3.9.0实践 | 火三</title>
+  <title>Python结合cocoapod自动发布版本实践 | 火三</title>
   
 
 
@@ -239,7 +239,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/17/Hexo升级3-9-0实践/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/18/Python结合cocoapod自动发布版本实践/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="火三">
@@ -253,7 +253,7 @@
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
           
-            Hexo升级3.9.0实践
+            Python结合cocoapod自动发布版本实践
             
 
           
@@ -270,7 +270,7 @@
                 
               
 
-              <time title="创建时间：2019-10-17 18:15:44 / 修改时间：18:39:27" itemprop="dateCreated datePublished" datetime="2019-10-17T18:15:44+08:00">2019-10-17</time>
+              <time title="创建时间：2019-10-18 15:30:29 / 修改时间：15:40:13" itemprop="dateCreated datePublished" datetime="2019-10-18T15:30:29+08:00">2019-10-18</time>
             </span>
           
             
@@ -287,7 +287,7 @@
               
                 <span class="post-meta-item-text">本文字数：</span>
               
-              <span>648</span>
+              <span>1.5k</span>
             </span>
           
             <span class="post-meta-item" title="阅读时长">
@@ -310,28 +310,18 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h3 id="一、诉求"><a href="#一、诉求" class="headerlink" title="一、诉求"></a>一、诉求</h3><p>hexo使用了好几年了，使用的版本一直是3.2.0, node 版本也是4.5.9版本，当前很多的node_models要去的版本都是6.0以上了，所以今天对hexo和node进行一次升级，全部都升级到最新版本。</p>
-<p><code>hexo-&gt;3.9.0</code></p>
-<p><code>node-&gt;10.16.3</code></p>
-<p>具体带来的好处是页面打开速度加快、使用最新的插件，升级完成之后，可以支持文章字数统计和阅读时间统计。此外，还有一点就是以前一直对写的文章的代码区，不是很满意。此次也一并解决。</p>
+        <h3 id="一、问题"><a href="#一、问题" class="headerlink" title="一、问题"></a>一、问题</h3><p>ios开发人员可能对cocoapod比较熟悉，在维护个人的cocoapod版本的时候，会遇到一个问题，那么就是本地代码库修改了文件，一般需要做如下三步操作</p>
+<ol>
+<li>代码功能开发完毕，提交代码到git服务器</li>
+<li>修改.podspec文件中的版本号</li>
+<li>给对应的提交打上tag，以便pod发布时需要</li>
+<li>使用pod trunk push 命令，发布到cocoapod</li>
+</ol>
+<p>步骤比较多，修改版本和打tag，有时候容易遗漏，如果发布失败的话，还需要重新再修改版本，打tag。很浪费时间，基于此，结合我最近研究的python，写了一个脚本。来实现一键提交代码、发布pod库的功能</p>
 <a id="more"></a>
-<h3 id="二、升级方案"><a href="#二、升级方案" class="headerlink" title="二、升级方案"></a>二、升级方案</h3><ul>
-<li><p><a href="https://www.jianshu.com/p/504e8227b041" target="_blank" rel="noopener">node升级方案</a></p>
-</li>
-<li><p><a href="https://blog.csdn.net/whjkm/article/details/81088518" target="_blank" rel="noopener">hexo升级方案</a></p>
-</li>
-<li><p><a href="https://blog.csdn.net/mqdxiaoxiao/article/details/93670772" target="_blank" rel="noopener">hexo文字字数与hexo阅读时间改造</a></p>
-<blockquote>
-<p>这里要多说几句，由于有两个方案实现这个功能，一种是通过<code>npm install hexo-wordcount --save</code>这种方式，<a href="https://blog.csdn.net/ganzhilin520/article/details/79048036" target="_blank" rel="noopener">误导文章</a>，浪费了很多时间在这里。而正是的方式应该是 <code>$ npm install hexo-symbols-count-time --save</code></p>
-</blockquote>
-</li>
-</ul>
-<p>最终总算是找到正确的姿势，文章也实现了字数与阅读时间的统计</p>
-<h3 id="三、意外产物"><a href="#三、意外产物" class="headerlink" title="三、意外产物"></a>三、意外产物</h3><p>在升级过程中，意外搞出来一些其他小的东西，如<strong>代码支持暗黑模式</strong>（这个功能以前也有，没有找到地方进行设置）、<strong>尾部贴了一个微信的二维码</strong>（希望能跟网友更多的交流）、另外还意外发现一个<strong>赞赏</strong>的功能，也打开了（如果有网友愿意的话~！~）。</p>
-<h3 id="四、还没实现，可以继续优化的点"><a href="#四、还没实现，可以继续优化的点" class="headerlink" title="四、还没实现，可以继续优化的点"></a>四、还没实现，可以继续优化的点</h3><p>目前我使用的Hexo，Next主题总得来说，已经比较满意了，但是美中不足的是，多说下线之后，没有找到合适的替代方案，所以评论这块还是一个待优化的点。</p>
-<h3 id="五、其他一些有用的链接"><a href="#五、其他一些有用的链接" class="headerlink" title="五、其他一些有用的链接"></a>五、其他一些有用的链接</h3><ul>
-<li><a href="https://hexo.io/themes/" target="_blank" rel="noopener">Hexo主题网站</a></li>
-</ul>
+<h3 id="二、脚本"><a href="#二、脚本" class="headerlink" title="二、脚本"></a>二、脚本</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#encoding:utf-8</span></span><br><span class="line"><span class="comment">#!usr/bin/python</span></span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">f = open(<span class="string">"CYKit.podspec"</span>, <span class="string">"r+"</span>)</span><br><span class="line"><span class="keyword">print</span> (<span class="string">"文件名为: "</span>, f.name)</span><br><span class="line"> </span><br><span class="line">shouldModifire = <span class="string">''</span> </span><br><span class="line">content = <span class="string">''</span></span><br><span class="line"><span class="keyword">for</span> line <span class="keyword">in</span> f.readlines():                          <span class="comment">#依次读取每行  </span></span><br><span class="line">    content = content + line</span><br><span class="line">    line = line.strip()                             <span class="comment">#去掉每行头尾空白  </span></span><br><span class="line">    <span class="keyword">if</span> <span class="string">'s.version = "0'</span> <span class="keyword">in</span> line:</span><br><span class="line">    	shouldModifire = line</span><br><span class="line">    </span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">#查找到需要修改的行</span></span><br><span class="line">print(<span class="string">'shouldModifire%s'</span>%shouldModifire)</span><br><span class="line">items = shouldModifire.split(<span class="string">'='</span>)</span><br><span class="line">print(items)</span><br><span class="line">versions = items[<span class="number">1</span>].split(<span class="string">'.'</span>)</span><br><span class="line">versions_last_length = len(versions[<span class="number">2</span>])</span><br><span class="line">versions_last = int(versions[<span class="number">2</span>][:versions_last_length<span class="number">-1</span>])</span><br><span class="line">versions_last_int = (versions_last) + <span class="number">1</span></span><br><span class="line">newVersion = str(versions[<span class="number">0</span>])+<span class="string">'.'</span>+ str(versions[<span class="number">1</span>]) + <span class="string">'.'</span> + str(versions_last_int) + <span class="string">'"'</span></span><br><span class="line">shouldReplaceItem = items[<span class="number">0</span>] + <span class="string">'='</span> + newVersion</span><br><span class="line"></span><br><span class="line"><span class="comment">#替换相应的版本号，并写入文件</span></span><br><span class="line">replaceed = content.replace(shouldModifire,shouldReplaceItem)</span><br><span class="line">print(<span class="string">'修改版本号:'</span> + shouldModifire + <span class="string">'=&gt;'</span> +  shouldReplaceItem)</span><br><span class="line"></span><br><span class="line"><span class="comment">#写入文件</span></span><br><span class="line">f.seek(<span class="number">0</span>)</span><br><span class="line">f.truncate()	</span><br><span class="line">f.write(replaceed)</span><br><span class="line">f.flush()</span><br><span class="line"><span class="comment">#关闭文件</span></span><br><span class="line">f.close()</span><br><span class="line"></span><br><span class="line"><span class="comment">#代码提交</span></span><br><span class="line">os.system(<span class="string">'git add .'</span>)</span><br><span class="line">os.system(<span class="string">'git commit -a -m "【脚本】修改相应版本号"'</span>)</span><br><span class="line">os.system(<span class="string">'git push origin master'</span>)</span><br><span class="line">os.system(<span class="string">'git tag -a '</span> + newVersion + <span class="string">' -m '</span> + <span class="string">'tag版本号'</span>)</span><br><span class="line">os.system(<span class="string">'git push --tags'</span>)</span><br><span class="line"><span class="comment">#提交到cocoapods</span></span><br><span class="line">os.system(<span class="string">'pod trunk push --allow-warnings'</span>)</span><br></pre></td></tr></table></figure>
+<h3 id="三、遇到的问题"><a href="#三、遇到的问题" class="headerlink" title="三、遇到的问题"></a>三、遇到的问题</h3><p>总体来说开发还算顺利，唯一卡壳的地方就是，读取本地文件，修改里面的版本号，这里使用了暴力的写文件方式。</p>
+<p>好了，又可以开心的撸代码了，see u</p>
 
     </div>
 
@@ -376,7 +366,7 @@
           
           <div class="post-tags">
             
-              <a href="/tags/Hexo/" rel="tag"># Hexo</a>
+              <a href="/tags/python/" rel="tag"># python</a>
             
           </div>
         
@@ -386,8 +376,8 @@
           <div class="post-nav">
             <div class="post-nav-next post-nav-item">
               
-                <a href="/2019/10/17/Python学习笔记（二）/" rel="next" title="Python学习笔记（二）">
-                  <i class="fa fa-chevron-left"></i> Python学习笔记（二）
+                <a href="/2019/10/17/Hexo升级3-9-0实践/" rel="next" title="Hexo升级3.9.0实践">
+                  <i class="fa fa-chevron-left"></i> Hexo升级3.9.0实践
                 </a>
               
             </div>
@@ -395,10 +385,6 @@
             <span class="post-nav-divider"></span>
 
             <div class="post-nav-prev post-nav-item">
-              
-                <a href="/2019/10/18/Python结合cocoapod自动发布版本实践/" rel="prev" title="Python结合cocoapod自动发布版本实践">
-                  Python结合cocoapod自动发布版本实践 <i class="fa fa-chevron-right"></i>
-                </a>
               
             </div>
           </div>
@@ -443,7 +429,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#一、诉求"><span class="nav-number">1.</span> <span class="nav-text">一、诉求</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二、升级方案"><span class="nav-number">2.</span> <span class="nav-text">二、升级方案</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三、意外产物"><span class="nav-number">3.</span> <span class="nav-text">三、意外产物</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#四、还没实现，可以继续优化的点"><span class="nav-number">4.</span> <span class="nav-text">四、还没实现，可以继续优化的点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#五、其他一些有用的链接"><span class="nav-number">5.</span> <span class="nav-text">五、其他一些有用的链接</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#一、问题"><span class="nav-number">1.</span> <span class="nav-text">一、问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二、脚本"><span class="nav-number">2.</span> <span class="nav-text">二、脚本</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三、遇到的问题"><span class="nav-number">3.</span> <span class="nav-text">三、遇到的问题</span></a></li></ol></div>
         
       </div>
       <!--/noindex-->
